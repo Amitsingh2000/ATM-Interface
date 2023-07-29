@@ -136,13 +136,13 @@ public class ATM
 				List<String> recipientTrans =recipient.getTransactions();
 				recipientTrans.add(tranAmt+" Amount recived From "+user.getUserId());
 				System.out.println(tranAmt+" Amount Transfer Successfully To "+recipient.getAccountNo()+" Account");
-				
+				return true;
 			}
 			else
 			{
 				System.out.println("Recipient Not Found In Database");
+				return false;
 			}
-			return true;
 		}
 		else
 		{
